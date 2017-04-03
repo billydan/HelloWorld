@@ -6,6 +6,10 @@
 
 package helloworld;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  *
  * @author BILLEL.ERRAHMANI
@@ -15,8 +19,11 @@ public class HelloWorld {
     /**
      * @param args the command line arguments
      */
-    public static void main ( String[] args ) {
-        System.out.println ( "Hello World" );
+    public static void main ( String[] args ) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println ( "Hi, type your name:" );
+        String s = br.readLine();
+        System.out.println ( "Hello "+s );
     }
     
 }
